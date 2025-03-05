@@ -1,0 +1,14 @@
+# <tipo>: <descrição curta>
+# |<---- Usar no máximo 50 caracteres ---->|
+
+# Descrição mais detalhada, se necessário
+# |<---- Tente limitar cada linha a 72 caracteres ---->|
+
+# --- TIPOS DE COMMIT ---
+# feat: Uma nova funcionalidade
+# fix: Correção de um bug
+# docs: Alterações na documentação
+# style: Alterações que não afetam o código (formatação, espaços, etc)
+# refactor: Alterações no código que não corrigem bugs nem adicionam funcionalidades
+# test: Adição ou correção de testes
+# chore: Alterações em arquivos de configuração, build, etc

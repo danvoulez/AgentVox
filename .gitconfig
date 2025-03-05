@@ -1,0 +1,55 @@
+[alias]
+    # Aliases para commits melhores e mais rápidos
+    s = status -s
+    c = commit
+    ca = commit --amend
+    cm = commit -m
+    
+    # Commit com mensagem padronizada por tipo
+    feat = "!f() { git commit -m \"feat: $1\"; }; f"
+    fix = "!f() { git commit -m \"fix: $1\"; }; f"
+    docs = "!f() { git commit -m \"docs: $1\"; }; f"
+    style = "!f() { git commit -m \"style: $1\"; }; f"
+    refactor = "!f() { git commit -m \"refactor: $1\"; }; f"
+    test = "!f() { git commit -m \"test: $1\"; }; f"
+    chore = "!f() { git commit -m \"chore: $1\"; }; f"
+    
+    # Commit rápido para todos os arquivos modificados
+    save = "!f() { git add -A && git commit -m \"$1\"; }; f"
+    
+    # Visualização melhorada do log
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    
+    # Desfazer o último commit mantendo as alterações
+    undo = reset HEAD~1 --soft
+    
+    # Adicionar todos os arquivos e fazer commit
+    ac = "!f() { git add -A && git commit -m \"$1\"; }; f"
+    
+    # Adicionar arquivos modificados e fazer commit
+    amc = "!f() { git add -u && git commit -m \"$1\"; }; f"
+    
+    # Push para o branch atual
+    p = "!f() { git push origin $(git symbolic-ref --short HEAD); }; f"
+
+[core]
+    # Configurações para melhor experiência
+    editor = vim
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/.gitignore
+    
+[color]
+    # Cores para melhor visualização
+    ui = auto
+    
+[push]
+    # Configuração de push mais segura
+    default = current
+    
+[pull]
+    # Evita conflitos no pull
+    rebase = true
+    
+[commit]
+    # Template para commits padronizados
+    template = ~/.gitmessage

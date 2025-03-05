@@ -1,0 +1,29 @@
+# Comandos para execução automática
+
+# Comandos Git
+git status
+git log
+git remote -v
+git branch
+git diff
+git pull
+git fetch
+
+# Comandos de listagem e navegação
+ls
+ls -la
+find . -name "*.tsx"
+find . -name "*.ts"
+grep -r "searchterm" .
+
+# Comandos npm
+npm list
+npm outdated
+npm run dev
+npm run build
+npm run lint
+
+# Outros comandos úteis
+cat package.json
+head README.md
+tail error.log

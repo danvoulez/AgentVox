@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tema Madrugada (padrão) - tons escuros com azul profundo */
+:root[data-theme="dawn"] {
+  --foreground-rgb: 220, 220, 255;
+  --background-start-rgb: 5, 10, 25;
+  --background-end-rgb: 15, 25, 50;
+  --accent-color: 100, 120, 255;
+  --card-bg: 20, 30, 60;
+  --border-color: 70, 85, 120;
+  --highlight-color: 120, 140, 255;
+}
+
+/* Tema Dia - tons claros e vibrantes */
+:root[data-theme="day"] {
+  --foreground-rgb: 50, 50, 50;
+  --background-start-rgb: 240, 240, 245;
+  --background-end-rgb: 220, 225, 235;
+  --accent-color: 30, 144, 255;
+  --card-bg: 255, 255, 255;
+  --border-color: 200, 200, 220;
+  --highlight-color: 0, 120, 215;
+}
+
+/* Tema Noite - tons escuros com roxo e azul */
+:root[data-theme="night"] {
+  --foreground-rgb: 230, 230, 250;
+  --background-start-rgb: 15, 10, 30;
+  --background-end-rgb: 30, 20, 60;
+  --accent-color: 138, 43, 226;
+  --card-bg: 35, 25, 65;
+  --border-color: 90, 70, 120;
+  --highlight-color: 180, 90, 255;
+}
+
+/* Tema padrão (Madrugada) para compatibilidade */
+:root {
+  --foreground-rgb: 220, 220, 255;
+  --background-start-rgb: 5, 10, 25;
+  --background-end-rgb: 15, 25, 50;
+  --accent-color: 100, 120, 255;
+  --card-bg: 20, 30, 60;
+  --border-color: 70, 85, 120;
+  --highlight-color: 120, 140, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  }
+  
+  .card {
+    @apply shadow rounded-lg p-6;
+    background-color: rgba(var(--card-bg), 0.9);
+    border: 1px solid rgba(var(--border-color), 0.3);
+  }
+  
+  .accent-text {
+    color: rgb(var(--accent-color));
+  }
+  
+  .highlight {
+    color: rgb(var(--highlight-color));
+  }
+}

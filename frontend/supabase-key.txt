@@ -1,0 +1,6 @@
+# Cole a chave do Supabase abaixo:
+NEXT_PUBLIC_SUPABASE_URL=https://nwvxzlkhoobtotuixvpn.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im53dnh6bGtob29idG90dWl4dnBuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA2NjUwNTAsImV4cCI6MjA1NjI0MTA1MH0.OBybRvjNy--BHYRvjNX--BHYRvjNy--BHYRvjNy--BHYRvjNy
+
+# Após colar a chave, execute o comando:
+# node update-env-with-key.js
